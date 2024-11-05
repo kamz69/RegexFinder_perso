@@ -1,0 +1,11 @@
+Regex Type	Description	Regex
+Wordpress website	Wordpress website	<(?:meta|link|script)[^>]+(?:wp-content|wp-includes|wordpress|wp-json)[^>]*>
+Sensitive Field	Sensitive Field	((\[)?('|")?([\w]{0,10})((key)|(secret)|(token)|(config)|(auth)|(access)|(admin))([\w]{0,10})('|")?(\])?( |)(:|=)( |)('|")(.*?)('|")(|,))
+HTML comment	HTML comment	(<!--.*?-->)
+URL manipulation	URL manipulation	(=(https?)(://|%3a%2f%2f))
+JWT	JWT	(eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9._-]{10,}|eyJ[A-Za-z0-9_\/+-]{10,}\.[A-Za-z0-9._\/+-]{10,})
+Debug Parameters	Debug Logic Parameters	((access=)|(adm=)|(admin=)|(alter=)|(cfg=)|(clone=)|(config=)|(create=)|(dbg=)|(debug=)|(delete=)|(disable=)|(edit=)|(enable=)|(exec=)|(execute=)|(grant=)|(load=)|(make=)|(modify=)|(rename=)|(reset=)|(root=)|(shell=)|(test=)|(toggl=))
+Upload Form	Upload Form	(type\=\"file\")
+Windows File/Dir Path	Windows File/Dir Path	[^\w](([a-zA-Z]:\\(?:\w+\\?)*)|([a-zA-Z]:\\(?:\w+\\)*\w+\.\w+))
+Password Field	Password Field	((|'|")(|[\w]{1,10})([p](ass|wd|asswd|assword))(|[\w]{1,10})(|'|")(:|=)( |)('|")(.*?)('|")(|,))
+Username Field	Username Field	((|'|")(|[\w]{1,10})(([u](ser|name|sername))|(account)|(utilisateur)|(login)|((((create|update)((d|r)|(by|on|at)))|(creator))))(|[\w]{1,10})(|'|")(:|=)( |)('|")(.*?)('|")(|,))
